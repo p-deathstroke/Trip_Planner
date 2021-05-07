@@ -1,0 +1,48 @@
+<main>
+    <nav class="navbar navbar-light bg-light border-bottom border-1 border-dark">
+        <div class="container-fluid">
+            <ul class="navbar-nav mx-auto">
+                <li class="nav-item"><h1>All Trips</h1></li>
+            </ul>
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a href="/profile" class="btn">
+                        <button type="button" name="profile" id="profile" class="btn"><img src="/public/images/profile_button.png" alt="profile_img"></button>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <br>
+    <table class="table" id="sortThis">
+        {{#each trips}}
+        <tr>
+            <td style="display: none;">{{month}}-{{start_day}}-{{year}}</td>
+            <td>
+                <a href="/activities/{{_id}}">
+                    <div class="row">
+                        <div class="col-3">  
+                            <img src="/public/images/trip_icon.png" alt="type_img">
+                        </div>
+                        <div class="col-9 border-start">
+                            <h2>Trip to {{destination}}</h2>
+                            <p>{{month}} {{start_day}} - {{end_day}} {{year}}</p>
+                            <p>{{flights}} Flights | {{hotel_stays}} Hotel Stays | {{activities}} Activities</p>
+                        </div>
+                    </div>
+                </a>
+            </td>
+        </tr>
+        {{/each}}
+    </table>
+</main>
+<footer class="footer mt-auto py-3 bg-primary">
+    <div class="d-grid">
+        <a href="/trips/add" class="btn btn-primary btn-lg mx-2">
+            <button type="button" name="add_new_trip" id="add_new_trip" class="btn btn-primary btn-lg mx-2">
+                <img src="/public/images/add_button.png" alt="add_trip">
+                Add New Trip
+            </button>
+        </a>
+    </div>
+</footer>
