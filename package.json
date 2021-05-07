@@ -1,0 +1,19 @@
+{
+  "name": "cs-545-trip-planner",
+  "version": "1.0.0",
+  "description": "CS 545 Final Project: Trip Planner",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app.js"
+  },
+  "author": "Jackson Perry, Priyank Shah, Sai Gaddam, Logan Drazovich, Rachi Rana, Preet Dabhi",
+  "license": "MIT",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "express": "^4.17.1",
+    "express-session": "^1.17.0",
+    "express-handlebars": "^5.3.0",
+    "mongodb": "3.6.3"
+  }
+}
